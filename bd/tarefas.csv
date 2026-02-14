@@ -1,0 +1,7 @@
+id_usuario;titulo;descricao;prioridade;progresso;data_criacao;data_final
+1;Banco de dados;Criar estrutura inicial do banco de dados;alta;concluida;2025-02-10;2025-02-12
+1;Modelagem;Definir tabelas e relacionamentos;alta;em andamento;2025-02-11;2025-02-15
+2;API;Implementar rotas CRUD das tarefas;media;pendente;2025-02-12;2025-02-18
+2;Testes;Testar endpoints no Postman;media;pendente;2025-02-13;2025-02-20
+3;Documentacao;Escrever README do projeto;baixa;pendente;2025-02-14;2025-02-22
+

@@ -1,0 +1,70 @@
+:root{
+  --bg-0: #0f1020;     /* base escura */
+  --bg-1: #171739;     /* variação */
+  --p1:   #7C5CFF;     /* roxo */
+  --p2:   #A78BFA;     /* lilás */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+.app{
+  min-height: 100%;
+  background: radial-gradient(1200px 800px at 30% 20%, rgba(124,92,255,.25), transparent 60%),
+              radial-gradient(900px 600px at 70% 60%, rgba(167,139,250,.18), transparent 55%),
+              linear-gradient(180deg, var(--bg-1), var(--bg-0));
+  color: #F2F3FF;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* camada extra: “névoa” + pontinhos */
+.bg{
+  position: absolute;
+  inset: -40px;
+  pointer-events: none;
+  background:
+    /* pontinhos (estrelas) */
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,.18) 0 1px, transparent 2px),
+    radial-gradient(circle at 60% 25%, rgba(255,255,255,.12) 0 1px, transparent 2px),
+    radial-gradient(circle at 80% 65%, rgba(255,255,255,.10) 0 1px, transparent 2px),
+    radial-gradient(circle at 35% 75%, rgba(255,255,255,.10) 0 1px, transparent 2px),
+    /* repetir pontinhos com “pattern” */
+    radial-gradient(circle, rgba(255,255,255,.08) 0 1px, transparent 2px);
+  background-size:
+    400px 300px,
+    500px 350px,
+    520px 420px,
+    460px 380px,
+    180px 180px;
+  background-position:
+    0 0, 0 0, 0 0, 0 0, 0 0;
+
+  filter: blur(.2px);
+  opacity: .9;
+}
+
+/* pra seu conteúdo ficar acima do fundo */
+.content{
+  position: relative;
+  padding: 48px;
+}
+
+/* exemplo de “glass card” */
+.card{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+.app{
+  background:
+    radial-gradient(700px 400px at 72% 34%, rgba(255,255,255,.10), transparent 60%),
+    radial-gradient(1200px 800px at 30% 20%, rgba(124,92,255,.25), transparent 60%),
+    radial-gradient(900px 600px at 70% 60%, rgba(167,139,250,.18), transparent 55%),
+    linear-gradient(180deg, #171739, #0f1020);
+}

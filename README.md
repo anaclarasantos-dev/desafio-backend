@@ -28,3 +28,42 @@ O sistema permite cadastro de usuários, login com JWT e controle de acesso por 
 - JSON Web Token (JWT)
 - bcrypt
 - Insomnia (testes de API)
+
+### 📡 Endpoints principais
+🔹 Usuários
+
+- POST /register — cadastro
+- POST /login — autenticação
+
+🔹 Tarefas
+
+- GET /tasks — listar tarefas
+- POST /tasks — criar tarefa
+- PUT /tasks/:id — atualizar
+- DELETE /tasks/:id — excluir
+
+### Como executar o projeto
+
+1. Antes de iniciar, é necessário ter instalado:
+    - Node.js
+    - npm
+    - XAMPP (ou MySQL/MariaDB)
+    - Insomnia ou Postman (para testes da API)
+
+2. Iniciar o banco de dados:
+   - Abra o XAMPP
+   - Inicie o serviço MySQL
+   - Crie o banco de dados no MySQL/MariaDB
+   - Execute os scripts SQL disponíveis na pasta /bd do projeto para criar as tabelas
+
+3. Instalar as dependencias do projeto:
+    - express
+    - cors
+    - mysql
+    - jsonwebtoken (JWT)
+    - bcrypt
+    - dotenv
+
+4. Executar o servidor:
+    node index.js
+

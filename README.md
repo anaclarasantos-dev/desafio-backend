@@ -54,7 +54,7 @@ Video executando a API: https://www.linkedin.com/posts/anaclarasantos-dev_projet
 
 2. Iniciar o banco de dados:
    - Abra o XAMPP
-   - Inicie o serviço MySQL
+   - Inicie o serviço MySQL e APACHE
    - Crie o banco de dados no MySQL/MariaDB
    - Execute os scripts SQL disponíveis na pasta /bd do projeto para criar as tabelas
 

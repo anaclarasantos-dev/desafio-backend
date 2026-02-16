@@ -20,14 +20,14 @@ function autenticacao(req, res, next) {
   });
 }
 function soAdmin(req, res, next) {
-  // req.user vem do seu middleware de autenticacao
+  req.user //vem do seu middleware de autenticacao
   if (!req.user) return res.status(401).json({ msg: "Não autenticado" }).end();
 
   if (req.user.status_usuario !== "admin") {
     return res.status(403).json({ msg: "Acesso permitido apenas para admin" }).end();
-  }
+ }
 
-  next();
+ next();
 }
 
 module.exports = {

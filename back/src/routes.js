@@ -1,8 +1,10 @@
 const Express = require ('express');
 
 const router = Express.Router();
-const autenticacao = require('./middlewares/autenticacao');
-const soAdmin = require('./middlewares/soAdmin');
+
+
+const { autenticacao, soAdmin } = require('./middlewares/autenticacao');
+
 
 const tarefascontroller = require("./controllers/tarefascontroller");
 
@@ -14,16 +16,14 @@ router.put("/tarefas", autenticacao, tarefascontroller.editarTarefa);
 
 const usuarioscontroller = require("./controllers/usuarioscontroller");
 
-router.get("/usuarios", autenticacao, soAdmin, usuarioscontroller.listarUsuarios);
+router.get("/usuarios", usuarioscontroller.listarUsuarios);
 router.get("/usuarios/:id_usuario", autenticacao, soAdmin, usuarioscontroller.listarUsuario);
 router.post("/usuarios", usuarioscontroller.cadastrarUsuario);
-router.delete("/usuarios/:id_usuario", autenticacao, soAdmin, usuarioscontroller.excluirUsuarioAdmin);
-router.put("/usuarios/:id_usuario", autenticacao, soAdmin, usuarioscontroller.editarUsuarioAdmin);
+// router.delete("/usuarios/:id_usuario", autenticacao, soAdmin, usuarioscontroller.excluirUsuarioAdmin);
+// router.put("/usuarios/:id_usuario", autenticacao, soAdmin, usuarioscontroller.editarUsuarioAdmin);
 
 router.post("/login", usuarioscontroller.login);
 
 router.delete("/me", autenticacao, usuarioscontroller.excluirMinhaConta);
-
-
 
 module.exports = router;

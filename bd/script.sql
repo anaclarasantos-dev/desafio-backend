@@ -24,7 +24,7 @@ create table tarefas(
     CONSTRAINT fk_tarefas_usuario FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE
 );
 
-LOAD DATA LOCAL INFILE 'C:/Users/Usuario/Desktop/desafio_backend/bd/usuarios.csv'
+LOAD DATA LOCAL INFILE './bd/usuarios.csv'
 INTO TABLE usuarios
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -32,7 +32,7 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS
 (nome_usuario, email, senha, status_usuario);
 
-LOAD DATA LOCAL INFILE 'C:/Users/Usuario/Desktop/desafio_backend/bd/tarefas.csv'
+LOAD DATA LOCAL INFILE './bd/tarefas.csv'
 INTO TABLE tarefas
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -42,3 +42,4 @@ IGNORE 1 ROWS
 
 select * from usuarios;
 select * from tarefas;
+

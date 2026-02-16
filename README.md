@@ -4,6 +4,8 @@ API REST desenvolvida em Node.js + Express para gerenciamento de tarefas com aut
 
 O sistema permite cadastro de usuários, login com JWT e controle de acesso por tipo de usuário (admin e comum). Cada usuário pode gerenciar apenas suas próprias tarefas, enquanto administradores possuem acesso global.
 
+Video executando a API: https://www.linkedin.com/posts/anaclarasantos-dev_projeto-backend-api-de-task-manager-estou-activity-7429199527372546050-9qXi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHMlsIBIxdSPAHuh3E9SkBEPyIU2NRbo9U
+
 ### 🔐 Recursos de segurança implementados
 
 - Autenticação com JSON Web Token (JWT)
@@ -66,4 +68,6 @@ O sistema permite cadastro de usuários, login com JWT e controle de acesso por 
 
 4. Executar o servidor:
     node index.js
+
+
 
